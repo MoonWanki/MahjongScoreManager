@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/yakuSelectLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/yakuRecycler1"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:scrollbars="horizontal" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/yakuRecycler2"
+        android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="horizontal"
+        android:background="@color/colorPrimary"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/yakuRecycler3"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="horizontal"
+        android:background="@color/colorPrimaryDark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="도라"
+                android:textColor="@android:color/white"
+                android:gravity="center|bottom"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/doraUpButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#0FFF"
+                    android:text="┼"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+
+                <Button
+                    android:id="@+id/doraDownButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#0FFF"
+                    android:text="─"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/agariCheckButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:src="@drawable/ic_done_white_24dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

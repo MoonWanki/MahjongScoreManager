@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/agariCheckDialogParent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="240dp"
+    android:layout_height="240dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/agariFinalCheckText1"
+        android:layout_width="match_parent"
+        android:padding="4dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryLight"
+        android:gravity="center_horizontal|bottom" />
+    <TextView
+        android:id="@+id/agariFinalCheckText2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/agariFinalCheckText3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="4dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryLight"
+        android:gravity="center_horizontal|top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/agariFinalCheckCancelButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorCancel"
+            android:src="@drawable/ic_close_white_24dp"/>
+
+        <ImageButton
+            android:id="@+id/agariFinalCheckOkButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorCheckable"
+            android:src="@drawable/ic_done_white_24dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

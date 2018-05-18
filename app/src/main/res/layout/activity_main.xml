@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimaryLight"
+    android:id="@+id/parentLayout"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/diceLayout"
+        android:layout_width="40dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/diceView1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/diceView1_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice1img"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/diceView1_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice2img"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/diceView1_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice3img"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/diceView1_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice4img"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/diceView1_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice5img"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/diceView1_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice6img"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/diceView2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/diceView2_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice1img"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/diceView2_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice2img"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/diceView2_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice3img"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/diceView2_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice4img"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/diceView2_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice5img"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/diceView2_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dice6img"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/playerLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/windView1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="東"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_toLeftOf="@+id/richButton1"/>
+
+        <ImageView
+            android:id="@+id/diceButton1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/richButton1"
+            android:src="@drawable/diceon" />
+
+        <ImageView
+            android:id="@+id/richButton1"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:src="@drawable/riichibongoff"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/boardLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="6dp"
+            android:background="@drawable/userboard"
+            android:layout_alignParentBottom="true">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/agariButton1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/agariimg"
+                android:layout_toLeftOf="@id/scoreText1"
+                android:layout_marginRight="15dp"
+                android:layout_centerInParent="true"
+                 />
+
+            <TextView
+                android:id="@+id/scoreText1"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="#121212"
+                android:layout_centerInParent="true"
+                android:text="25000"
+                android:textSize="34sp"
+                android:textColor="@color/colorAccent"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/nakiButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/scoreText1"
+                android:src="@drawable/nakioffimg"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/playerLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:rotation="-90"
+        android:translationX="125dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/windView2"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="南"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_toLeftOf="@+id/richButton2"/>
+
+        <ImageView
+            android:id="@+id/diceButton2"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/diceoff"
+            android:layout_toRightOf="@+id/richButton2"/>
+
+        <ImageView
+            android:id="@+id/richButton2"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:src="@drawable/riichibongoff"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/boardLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="6dp"
+            android:background="@drawable/userboard"
+            android:layout_alignParentBottom="true">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/agariButton2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/agariimg"
+                android:layout_toLeftOf="@id/scoreText2"
+                android:layout_marginRight="15dp"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:id="@+id/scoreText2"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="#121212"
+                android:layout_centerInParent="true"
+                android:text="25000"
+                android:textSize="34sp"
+                android:textColor="@color/colorAccent"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/nakiButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/scoreText2"
+                android:src="@drawable/nakioffimg"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/playerLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:rotation="180"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/windView3"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="西"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_toLeftOf="@+id/richButton3"/>
+
+        <ImageView
+            android:id="@+id/diceButton3"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/diceoff"
+            android:layout_toRightOf="@+id/richButton3"/>
+
+        <ImageView
+            android:id="@+id/richButton3"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:src="@drawable/riichibongoff"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/boardLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="6dp"
+            android:background="@drawable/userboard"
+            android:layout_alignParentBottom="true">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/agariButton3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/agariimg"
+                android:layout_toLeftOf="@id/scoreText3"
+                android:layout_marginRight="15dp"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:id="@+id/scoreText3"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="#121212"
+                android:layout_centerInParent="true"
+                android:text="25000"
+                android:textSize="34sp"
+                android:textColor="@color/colorAccent"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/nakiButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/scoreText3"
+                android:src="@drawable/nakioffimg"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/playerLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:rotation="90"
+        android:translationX="-125dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/windView4"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="北"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_toLeftOf="@+id/richButton4"/>
+
+        <ImageView
+            android:id="@+id/diceButton4"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/diceoff"
+            android:layout_toRightOf="@+id/richButton4"/>
+
+        <ImageView
+            android:id="@+id/richButton4"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:src="@drawable/riichibongoff"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/boardLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="6dp"
+            android:background="@drawable/userboard"
+            android:layout_alignParentBottom="true">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/agariButton4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/agariimg"
+                android:layout_toLeftOf="@id/scoreText4"
+                android:layout_marginRight="15dp"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:id="@+id/scoreText4"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="#121212"
+                android:layout_centerInParent="true"
+                android:text="25000"
+                android:textSize="34sp"
+                android:textColor="@color/colorAccent"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/nakiButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/scoreText4"
+                android:src="@drawable/nakioffimg"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/agariChoiceButton1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="54dp"
+        android:textSize="36sp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/agariChoiceButton2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_menu_compass"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="54dp"
+        android:textSize="36sp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/agariChoiceButton3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_menu_compass"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="54dp"
+        android:textSize="36sp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/agariChoiceButton4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="54dp"
+        android:textSize="36sp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+
+        />
+
+
+</RelativeLayout>
