@@ -6,21 +6,22 @@
     android:layout_width="360dp"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@color/colorPrimaryLight"
+    android:background="@drawable/bg"
     android:id="@+id/parentLayout"
     tools:context=".activity.MainActivity">
 
+    <!-- Dice Layout -->
     <RelativeLayout
         android:id="@+id/diceLayout"
-        android:layout_width="40dp"
-        android:layout_height="80dp"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
         android:layout_centerInParent="true">
 
         <RelativeLayout
             android:id="@+id/diceView1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:padding="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true">
 
@@ -66,9 +67,9 @@
 
         <RelativeLayout
             android:id="@+id/diceView2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:padding="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="4dp"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true">
 
@@ -115,6 +116,7 @@
 
     </RelativeLayout>
 
+    <!-- Player 1 Layout -->
     <RelativeLayout
         android:id="@+id/playerLayout1"
         android:layout_width="match_parent"
@@ -122,21 +124,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true">
 
-        <TextView
-            android:id="@+id/windView1"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:text="東"
-            android:textSize="24sp"
-            android:gravity="center"
-            android:textColor="@color/colorPrimary"
-            android:layout_toLeftOf="@+id/richButton1"/>
-
         <ImageView
             android:id="@+id/diceButton1"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="40dp"
-            android:layout_alignParentTop="true"
+            android:padding="6dp"
             android:layout_toRightOf="@+id/richButton1"
             android:src="@drawable/diceon" />
 
@@ -156,21 +148,20 @@
             android:background="@drawable/userboard"
             android:layout_alignParentBottom="true">
 
-            <android.support.design.widget.FloatingActionButton
+            <ImageView
                 android:id="@+id/agariButton1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/agariimg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/agaributtonimg"
                 android:layout_toLeftOf="@id/scoreText1"
-                android:layout_marginRight="15dp"
-                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
                  />
 
             <TextView
                 android:id="@+id/scoreText1"
                 android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:background="#121212"
+                android:layout_height="40dp"
                 android:layout_centerInParent="true"
                 android:text="25000"
                 android:textSize="34sp"
@@ -179,11 +170,10 @@
 
             <ImageView
                 android:id="@+id/nakiButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_toRightOf="@id/scoreText1"
-                android:src="@drawable/nakioffimg"/>
+                android:src="@drawable/naki"/>
 
         </RelativeLayout>
 
@@ -191,6 +181,7 @@
 
     </RelativeLayout>
 
+    <!-- Player 2 Layout -->
     <RelativeLayout
         android:id="@+id/playerLayout2"
         android:layout_width="match_parent"
@@ -200,21 +191,13 @@
         android:layout_alignParentRight="true"
         android:layout_centerInParent="true">
 
-        <TextView
-            android:id="@+id/windView2"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:text="南"
-            android:textSize="24sp"
-            android:gravity="center"
-            android:textColor="@color/colorPrimary"
-            android:layout_toLeftOf="@+id/richButton2"/>
-
         <ImageView
             android:id="@+id/diceButton2"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="40dp"
-            android:src="@drawable/diceoff"
+            android:src="@drawable/diceon"
+            android:padding="6dp"
+            android:visibility="gone"
             android:layout_toRightOf="@+id/richButton2"/>
 
         <ImageView
@@ -233,21 +216,20 @@
             android:background="@drawable/userboard"
             android:layout_alignParentBottom="true">
 
-            <android.support.design.widget.FloatingActionButton
+            <ImageView
                 android:id="@+id/agariButton2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/agariimg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/agaributtonimg"
                 android:layout_toLeftOf="@id/scoreText2"
-                android:layout_marginRight="15dp"
-                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
                 />
 
             <TextView
                 android:id="@+id/scoreText2"
                 android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:background="#121212"
+                android:layout_height="40dp"
                 android:layout_centerInParent="true"
                 android:text="25000"
                 android:textSize="34sp"
@@ -256,11 +238,10 @@
 
             <ImageView
                 android:id="@+id/nakiButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_toRightOf="@id/scoreText2"
-                android:src="@drawable/nakioffimg"/>
+                android:src="@drawable/naki"/>
 
         </RelativeLayout>
 
@@ -268,6 +249,7 @@
 
     </RelativeLayout>
 
+    <!-- Player 3 Layout -->
     <RelativeLayout
         android:id="@+id/playerLayout3"
         android:layout_width="match_parent"
@@ -276,21 +258,13 @@
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true">
 
-        <TextView
-            android:id="@+id/windView3"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:text="西"
-            android:textSize="24sp"
-            android:gravity="center"
-            android:textColor="@color/colorPrimary"
-            android:layout_toLeftOf="@+id/richButton3"/>
-
         <ImageView
             android:id="@+id/diceButton3"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="40dp"
-            android:src="@drawable/diceoff"
+            android:src="@drawable/diceon"
+            android:padding="6dp"
+            android:visibility="gone"
             android:layout_toRightOf="@+id/richButton3"/>
 
         <ImageView
@@ -309,21 +283,20 @@
             android:background="@drawable/userboard"
             android:layout_alignParentBottom="true">
 
-            <android.support.design.widget.FloatingActionButton
+            <ImageView
                 android:id="@+id/agariButton3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/agariimg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/agaributtonimg"
                 android:layout_toLeftOf="@id/scoreText3"
-                android:layout_marginRight="15dp"
-                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
                 />
 
             <TextView
                 android:id="@+id/scoreText3"
                 android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:background="#121212"
+                android:layout_height="40dp"
                 android:layout_centerInParent="true"
                 android:text="25000"
                 android:textSize="34sp"
@@ -332,11 +305,10 @@
 
             <ImageView
                 android:id="@+id/nakiButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_toRightOf="@id/scoreText3"
-                android:src="@drawable/nakioffimg"/>
+                android:src="@drawable/naki"/>
 
         </RelativeLayout>
 
@@ -344,6 +316,7 @@
 
     </RelativeLayout>
 
+    <!-- Player 4 Layout -->
     <RelativeLayout
         android:id="@+id/playerLayout4"
         android:layout_width="match_parent"
@@ -353,21 +326,13 @@
         android:layout_alignParentLeft="true"
         android:layout_centerInParent="true">
 
-        <TextView
-            android:id="@+id/windView4"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:text="北"
-            android:textSize="24sp"
-            android:gravity="center"
-            android:textColor="@color/colorPrimary"
-            android:layout_toLeftOf="@+id/richButton4"/>
-
         <ImageView
             android:id="@+id/diceButton4"
-            android:layout_width="60dp"
+            android:layout_width="50dp"
             android:layout_height="40dp"
-            android:src="@drawable/diceoff"
+            android:src="@drawable/diceon"
+            android:padding="6dp"
+            android:visibility="gone"
             android:layout_toRightOf="@+id/richButton4"/>
 
         <ImageView
@@ -386,21 +351,20 @@
             android:background="@drawable/userboard"
             android:layout_alignParentBottom="true">
 
-            <android.support.design.widget.FloatingActionButton
+            <ImageView
                 android:id="@+id/agariButton4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/agariimg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/agaributtonimg"
                 android:layout_toLeftOf="@id/scoreText4"
-                android:layout_marginRight="15dp"
-                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
                 />
 
             <TextView
                 android:id="@+id/scoreText4"
                 android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:background="#121212"
+                android:layout_height="40dp"
                 android:layout_centerInParent="true"
                 android:text="25000"
                 android:textSize="34sp"
@@ -409,11 +373,10 @@
 
             <ImageView
                 android:id="@+id/nakiButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_toRightOf="@id/scoreText4"
-                android:src="@drawable/nakioffimg"/>
+                android:src="@drawable/naki"/>
 
         </RelativeLayout>
 

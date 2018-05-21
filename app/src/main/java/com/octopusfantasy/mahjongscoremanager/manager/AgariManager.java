@@ -65,6 +65,13 @@ public class AgariManager {
             isPeace = true;
             if(tsumo) fu = 20; else fu = 30;
             isFuChangeable = false;
+        } else if(yaku.getName().equals("더블리치")) { // 더블리치 선택 시
+            for(Yaku curYaku : satisfiedYakuList) {
+                if(curYaku.getName().equals("리치")) {
+                    satisfiedYakuList.remove(curYaku); // 리치 없앰
+                    break;
+                }
+            }
         }
         satisfiedYakuList.add(yaku);
         calculateScore();
@@ -79,6 +86,8 @@ public class AgariManager {
             isPeace = false;
             setDefaultFu();
             isFuChangeable = true;
+        } else if(yaku.getName().equals("더블리치")) { // 더블리치 선택 시
+            satisfiedYakuList.add(new Yaku(1, "리치", true));
         }
         satisfiedYakuList.remove(yaku);
         calculateScore();

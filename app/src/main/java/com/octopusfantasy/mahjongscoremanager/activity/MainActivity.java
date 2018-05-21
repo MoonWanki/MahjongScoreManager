@@ -76,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.diceButton3) ImageView diceButton3;
     @BindView(R.id.diceButton4) ImageView diceButton4;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
     private void rollDice() {
         isDiceRolling = true;
         timer = new Timer();
-        count = 0;
+        count = 2;
 
         timer.schedule(new TimerTask() {
             @Override
@@ -333,40 +331,40 @@ public class MainActivity extends AppCompatActivity {
                 if(gameManager.getPlayer(1).isRiched()) break;
                 if(gameManager.getPlayer(1).isClosed()) {
                     gameManager.getPlayer(1).setClosed(false);
-                    view.setImageResource(R.drawable.nakionimg);
+                    view.setAlpha(1.0f);
                 } else {
                     gameManager.getPlayer(1).setClosed(true);
-                    view.setImageResource(R.drawable.nakioffimg);
+                    view.setAlpha(0.2f);
                 }
                 break;
             case R.id.nakiButton2:
                 if(gameManager.getPlayer(2).isRiched()) break;
                 if(gameManager.getPlayer(2).isClosed()) {
                     gameManager.getPlayer(2).setClosed(false);
-                    view.setImageResource(R.drawable.nakionimg);
+                    view.setAlpha(1.0f);
                 } else {
                     gameManager.getPlayer(2).setClosed(true);
-                    view.setImageResource(R.drawable.nakioffimg);
+                    view.setAlpha(0.2f);
                 }
                 break;
             case R.id.nakiButton3:
                 if(gameManager.getPlayer(3).isRiched()) break;
                 if(gameManager.getPlayer(3).isClosed()) {
                     gameManager.getPlayer(3).setClosed(false);
-                    view.setImageResource(R.drawable.nakionimg);
+                    view.setAlpha(1.0f);
                 } else {
                     gameManager.getPlayer(3).setClosed(true);
-                    view.setImageResource(R.drawable.nakioffimg);
+                    view.setAlpha(0.2f);
                 }
                 break;
             case R.id.nakiButton4:
                 if(gameManager.getPlayer(4).isRiched()) break;
                 if(gameManager.getPlayer(4).isClosed()) {
                     gameManager.getPlayer(4).setClosed(false);
-                    view.setImageResource(R.drawable.nakionimg);
+                    view.setAlpha(1.0f);
                 } else {
                     gameManager.getPlayer(4).setClosed(true);
-                    view.setImageResource(R.drawable.nakioffimg);
+                    view.setAlpha(0.2f);
                 }
                 break;
             default: break;
@@ -429,27 +427,27 @@ public class MainActivity extends AppCompatActivity {
         richButton3.setImageResource(R.drawable.riichibongoff);
         richButton4.setImageResource(R.drawable.riichibongoff);
 
-        nakiButton1.setImageResource(R.drawable.nakioffimg);
-        nakiButton2.setImageResource(R.drawable.nakioffimg);
-        nakiButton3.setImageResource(R.drawable.nakioffimg);
-        nakiButton4.setImageResource(R.drawable.nakioffimg);
+        nakiButton1.setAlpha(0.2f);
+        nakiButton2.setAlpha(0.2f);
+        nakiButton3.setAlpha(0.2f);
+        nakiButton4.setAlpha(0.2f);
 
         switch (gameManager.getCurrentRotation()) {
             case 1:
-                diceButton4.setImageResource(R.drawable.diceoff);
-                diceButton1.setImageResource(R.drawable.diceon);
+                diceButton4.setVisibility(View.GONE);
+                diceButton1.setVisibility(View.VISIBLE);
                 break;
             case 2:
-                diceButton1.setImageResource(R.drawable.diceoff);
-                diceButton2.setImageResource(R.drawable.diceon);
+                diceButton1.setVisibility(View.GONE);
+                diceButton2.setVisibility(View.VISIBLE);
                 break;
             case 3:
-                diceButton2.setImageResource(R.drawable.diceoff);
-                diceButton3.setImageResource(R.drawable.diceon);
+                diceButton2.setVisibility(View.GONE);
+                diceButton3.setVisibility(View.VISIBLE);
                 break;
             case 4:
-                diceButton3.setImageResource(R.drawable.diceoff);
-                diceButton4.setImageResource(R.drawable.diceon);
+                diceButton3.setVisibility(View.GONE);
+                diceButton4.setVisibility(View.VISIBLE);
                 break;
         }
 

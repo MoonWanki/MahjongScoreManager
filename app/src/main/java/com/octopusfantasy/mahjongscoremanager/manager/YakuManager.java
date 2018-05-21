@@ -38,7 +38,6 @@ public class YakuManager {
         yakuList.add(new Yaku(2, "상앙꼬", true));
         yakuList.add(new Yaku(2, "삼색동각", false, 2));
         yakuList.add(new Yaku(2, "소삼원", false, 2));
-        yakuList.add(new Yaku(2, "더블리치", true));
         yakuList.add(new Yaku(2, "혼노두", false, 2));
         yakuList.add(new Yaku(2, "산깡쯔", false, 2));
 
@@ -102,7 +101,7 @@ public class YakuManager {
         return newYakuList;
     }
 
-    public ArrayList<Yaku> get2ndYakuList(boolean closed) {
+    public ArrayList<Yaku> get2ndYakuList(boolean closed, boolean isWinnerRiched) {
         ArrayList<Yaku> newYakuList = new ArrayList<>();
         for (Yaku curYaku : yakuList) {
             if(curYaku.getHan() == 2) {
@@ -110,6 +109,8 @@ public class YakuManager {
                 newYakuList.add(curYaku);
             }
         }
+        if(isWinnerRiched) newYakuList.add(new Yaku(2, "더블리치", true));
+
         return newYakuList;
     }
 

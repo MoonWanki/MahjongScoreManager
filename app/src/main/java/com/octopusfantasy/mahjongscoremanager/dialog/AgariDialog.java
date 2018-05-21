@@ -164,6 +164,7 @@ public class AgariDialog extends Dialog {
     private void setYakuLists() {
 
         boolean isWinnerClosed = gameManager.getCurrentWinner().isClosed();
+        boolean isWinnerRiched = gameManager.getCurrentWinner().isRiched();
 
         RecyclerView yakuRecycler1 = findViewById(R.id.yakuRecycler1);
         RecyclerView yakuRecycler2 = findViewById(R.id.yakuRecycler2);
@@ -177,9 +178,9 @@ public class AgariDialog extends Dialog {
                 isWinnerClosed,
                 gameManager.getCurrentRound(),
                 gameManager.getCurrentWinner().getWind(),
-                gameManager.getCurrentWinner().isRiched()
+                isWinnerRiched
         ), this));
-        yakuRecycler2.setAdapter(new YakuRecyclerViewAdapter(gameManager.getYakuManager().get2ndYakuList(isWinnerClosed), this));
+        yakuRecycler2.setAdapter(new YakuRecyclerViewAdapter(gameManager.getYakuManager().get2ndYakuList(isWinnerClosed, isWinnerRiched), this));
         yakuRecycler3.setAdapter(new YakuRecyclerViewAdapter(gameManager.getYakuManager().get3rdYakuList(isWinnerClosed), this));
 
         yakuRecycler1.setHasFixedSize(true);
